@@ -153,11 +153,11 @@ AlphaExtract/
 ## Screenshots
 
 - Project Demo
-![Demo](./demo/demo2.gif){width=1920px}
+![Demo](./demo/demo2.gif)
 *Complete demonstration of PDF upload, processing, and summary generation*
 
 - Application Interface
-![Interface](./demo/demo1.png){width=1920px}
+![Interface](./demo/demo1.png)
 *The clean and intuitive application interface*
 
 ---
